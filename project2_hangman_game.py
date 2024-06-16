@@ -3,14 +3,15 @@ word_list=["apple","banana","apricot","blackberry","blueberry","cherry","cranber
 selected_word=random.choice(word_list)
 lives=len(selected_word)+2
 
-
+#creates blank spaces for the selected word
 display=[]
 for i in range(len(selected_word)):
     display += '_'
 print(display)
-
+#loop starts 
 game_ends=False
 while not game_ends:
+    #user input is taken
     guessed_letter=input("Guess a letter: ").lower()
     for position in range(len(selected_word)):
         letter=selected_word[position]
